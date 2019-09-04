@@ -1,0 +1,15 @@
+import numpy as np
+arr1 = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+print(arr1)
+print(arr1.shape)
+arr1 = np.expand_dims(arr1,axis=0)
+print(arr1)
+print(arr1.shape)
+print(arr1[0,0,0,:])
+print(arr1[0,0,1,:])
+print(arr1[0,1,0,:])
+print(arr1[0,1,1,:])
+sumAllButLastAxis = arr1[0,0,0,:] + arr1[0,0,1,:] + arr1[0,1,0,:] + arr1[0,1,1,:]
+print(sumAllButLastAxis)
+print(sumAllButLastAxis / 4.0)
+print(np.mean(arr1,axis=(0,1,2)))
